@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     wget
     curl
+    openssl
   ];
 
   # wsl vscode连接必须下载
