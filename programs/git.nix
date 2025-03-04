@@ -10,8 +10,8 @@
           defaultBranch = "main";
         };
         user = {
-          name = "eu";
-          email = "eu@fufu.moe";
+          name = "ff";
+          email = "mk@fufu.moe";
           signingkey = "~/.ssh/id_ed25519";
         };
         commit = {

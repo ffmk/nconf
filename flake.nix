@@ -1,5 +1,5 @@
 {
-  description = "euphon";
+  description = "ffnix";
 
   nixConfig = {
     substituters = [
@@ -42,9 +42,9 @@
             (
               { pkgs, ... }:
               {
-                users.users.eu = {
+                users.users.ff = {
                   isNormalUser = true;
-                  description = "eu";
+                  description = "ff";
                   shell = pkgs.bashInteractive;
                   extraGroups = [
                     "wheel"
@@ -59,19 +59,19 @@
                     # vialias = true;
                   };
                 };
-                services.displayManager.sddm.wayland.enable = true;
-                services.pipewire.alsa.enable = true;
+                # services.displayManager.sddm.wayland.enable = true;
+                # services.pipewire.alsa.enable = true;
               }
             )
 
             nixos-wsl.nixosModules.default
             {
-              system.stateVersion = "24.05";
+              system.stateVersion = "24.11";
               # vscode-remote-workaround.enable = true;
               wsl = {
                 enable = true;
                 useWindowsDriver = true;
-                defaultUser = "eu";
+                defaultUser = "ff";
               };
             }
 
@@ -82,7 +82,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              home-manager.users.eu = import ./home/home.nix;
+              home-manager.users.ff = import ./home/home.nix;
 
               # 使用 home-manager.extraSpecialArgs 自定义传递给 ./home.nix 的参数
               # 取消注释下面这一行，就可以在 home.nix 中使用 flake 的所有 inputs 参数了
@@ -92,7 +92,7 @@
             {
               # given the users in this list the right to specify additional substituters via:
               #    1. `nixConfig.substituters` in `flake.nix`
-              nix.settings.trusted-users = [ "eu" ];
+              nix.settings.trusted-users = [ "ff" ];
             }
           ];
         };

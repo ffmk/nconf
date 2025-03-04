@@ -2,8 +2,8 @@
 
 {
   # 注意修改这里的用户名与用户目录
-  home.username = "eu";
-  home.homeDirectory = "/home/eu";
+  home.username = "ff";
+  home.homeDirectory = "/home/ff";
 
   imports = [
     # ../../sys-conf/hyprland/hyprland.nix
@@ -67,7 +67,7 @@
     };
   };
 
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
