@@ -9,6 +9,15 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  nixConfig = {
+    substituters = [
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://nix-community.cachix.org"
+      "https://cache.nixos.org"
+    ];
+  };
+
   outputs =
     {
       self,
